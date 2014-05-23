@@ -1,0 +1,50 @@
+<!DOCTYPE html>	
+<html>	
+<head>	
+ <title>Clubs</title>	
+ <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>	
+ <%= javascript_include_tag "application", "data-turbolinks-track" => true %>	
+ <%= csrf_meta_tags %>	
+</head>	
+<body>	
+	 <div class="navbar navbar-default navbar-static-top" role="navigation">	
+ 	 	 <div class="navbar-header">	
+			 <div class="container">
+			
+	            <ul class="nav pull-right">
+	              <%= link_to "Sign in", '#' %></li>
+	            </ul>
+         		 	
+				<li class="dropdown">
+        		  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Home <b class='navbar-header'></b></a>
+       			   <ul class="dropdown-menu">
+       			 	<li><a href="#">Home</a></li>
+
+		            <li><a href="#">New Student?</a></li>
+		            <li><a href="#">New Society?</a></li>
+		            <li><a href="#">New Event</a></li>
+		            <li class="divider"></li>
+		            <li><a href="#">Settings</a></li>
+		            <li class="divider"></li>
+		            <li><a href="#">My Clubs</a></li>
+		          </ul>
+       			 </li>				 				 
+				 <%= link_to "Events", clubs_path, class: 'navbar-brand' %>	
+
+				 <%= link_to "Clubs", clubs_path, class: 'navbar-brand' %>	
+
+				 <%= link_to "Categories", clubs_path, class: 'navbar-brand' %>	
+				 
+				 <%= link_to "Help", clubs_path, class: 'navbar-brand' %>	
+				 
+				 <%= link_to "About", clubs_path, class: 'navbar-brand' %>	
+
+
+			 </div>	
+	 	 </div>	
+	 </div>	
+	 <div class="container">	
+	 	 <%= yield %>	
+	 </div>	
+</body>	
+</html>	
