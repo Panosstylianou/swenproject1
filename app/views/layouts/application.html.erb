@@ -18,26 +18,24 @@
 				<li class="dropdown">
         		  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Home <b class='navbar-header'></b></a>
        			   <ul class="dropdown-menu">
-       			 	<li><a href="#">Home</a></li>
+       			 	<li><a href="/clubs">Home</a></li>
 
-		            <li><a href="#">New Student?</a></li>
-		            <li><a href="#">New Society?</a></li>
-		            <li><a href="#">New Event</a></li>
+		            <li><a href="/members/new">New Student?</a></li>
+		            <li><a href="/clubs/new">New Society?</a></li>
+		            <li><a href="/events/new">New Event</a></li>
 		            <li class="divider"></li>
 		            <li><a href="#">Settings</a></li>
 		            <li class="divider"></li>
 		            <li><a href="#">My Clubs</a></li>
 		          </ul>
        			 </li>				 				 
-				 <%= link_to "Events", clubs_path, class: 'navbar-brand' %>	
+				 <%= link_to "Events", events_path, class: 'navbar-brand' %>	
 
 				 <%= link_to "Clubs", clubs_path, class: 'navbar-brand' %>	
-
-				 <%= link_to "Categories", clubs_path, class: 'navbar-brand' %>	
 				 
-				 <%= link_to "Help", clubs_path, class: 'navbar-brand' %>	
+				 <%= link_to "Help", help_path, class: 'navbar-brand' %>	
 				 
-				 <%= link_to "About", clubs_path, class: 'navbar-brand' %>	
+				 <%= link_to "About", about_path, class: 'navbar-brand' %>	
 
 
 			 </div>	

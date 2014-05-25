@@ -1,0 +1,30 @@
+ <title>Events</title>	
+<h1>Listing events</h1>
+<table class="table table-bordered table striped">
+
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Date</th>
+      <th>Location</th>
+      <th>Description</th>
+      <th>Tickets</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @events.each do |event| %>
+      <tr>
+        <td><%= link_to event.Name, event %></td>
+        <td><%= event.Date %></td>
+        <td><%= event.Location %></td>
+        <td><%= event.Description %></td>
+        <td><%= event.Tickets %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Event?', new_event_path %>

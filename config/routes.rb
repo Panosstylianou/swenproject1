@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
   
+  get 'about', to: 'pages#about'
+
+  get 'help', to:  'pages#help'
+  
+  get 'categories', to: 'categories#index'
+
+  resources :events
+
   resources :members
 
   resources :clubs
@@ -7,6 +15,8 @@ Rails.application.routes.draw do
   resources :sessions, :only => [:new, :create, :destroy]
   
   get 'login', to: 'sessions#new'
+  
+  post "sign_in" => "authentication#login"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
